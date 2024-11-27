@@ -1,5 +1,5 @@
 def fruits():
-    liste = ["pomme ","cerise ", "orange "]
+    liste = ["pomme ","cerise ", "orange ",]
     liste.append("melon")
     return liste
     
