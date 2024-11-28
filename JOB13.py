@@ -4,13 +4,17 @@ def supp_doubleNumber_inliste():
 # Iterating through List in order to find the list's length
     for _ in list:
         list_length += 1
-    # print(list_length) Find list length
-    for i in range(list_length): #firts pass
-        for j in range(list_length - 1): #go through all list
-            if list[j] > list[j + 1]: #compare if an element is bigger than the next one
-                list[j], list[j + 1] = list[j + 1], list[j] #reorder list
-                if list[j] == list[j + 1]:
-                    del list[j + 1]
+    # Find list length
+    i = 0
+    while i < list_length: #firts pass
+        j= i + 1
+        while j < list_length: #go through all list
+            if list[i] == list[j]: #if a double is find
+                del list[j] #suppress double
+                list_length -= 1 # in order not to be out of range
+            else:
+                j += 1 #go o next element
+        i += 1
     return list
         
 clean_list = supp_doubleNumber_inliste()
